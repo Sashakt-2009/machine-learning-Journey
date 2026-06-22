@@ -19,7 +19,7 @@
 
 ### Important attributes of an `ndarray`
 
-1. **ddarray.dim:** number of dimensions of array
+1. **ddarray.ndim:** number of dimensions of array
 
 2. **ndarray.shape:** This is a tuple of integers indicating the size of the array in each dimension. For a matrix with n rows and m columns, shape will be `(n,m)`
 
