@@ -51,3 +51,14 @@ blue_only_img = Image.fromarray(red_only)
 
 cropped_img = utils.Crop((0,300), (0,300), img)
 cropped_img.show()
+
+# flipping img -> vflip & hflip
+
+V_flipped = np.flip(arr, axis=0)
+H_flipped = np.flip(arr, axis=1)
+
+V_flipped_img = Image.fromarray(V_flipped)
+H_flippedP_img = Image.fromarray(H_flipped)
+
+a = utils.increase_brightness(img, 10)
+print(a)
