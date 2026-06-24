@@ -36,18 +36,21 @@ min_pixel_val: {(int(R_vals.min()), int(G_vals.min()), int(B_vals.min()))}\nstan
 
 # single color only 
 red_only = arr.copy()
-red_only[:,:, 1:2] = 0              # making G and B values 0
+red_only[:,:,1] = 0
+red_only[:,:,2] = 0             # making G and B values 0
 red_only_img = Image.fromarray(red_only)
 red_only_img.save("image lab\saves\RedOnlyimg.png")
 
 green_only = arr.copy()
-green_only[:,:, 0 & 2] = 0            # making R and B values 0
-green_only_img = Image.fromarray(red_only)
+green_only[:,:, 0] = 0
+green_only[:,:, 2] = 0           # making R and B values 0
+green_only_img = Image.fromarray(green_only)
 green_only_img.save("image lab\saves\GeenOnlyimg.png")
 
 blue_only = arr.copy()
-blue_only[:,:, 0:1] = 0           # making R and B values 0
-blue_only_img = Image.fromarray(red_only)
+blue_only[:,:,0] = 0
+blue_only[:,:,1] = 0          # making R and B values 0
+blue_only_img = Image.fromarray(blue_only)
 blue_only_img.save("image lab\saves\BlueOnlyimg.png")
 
 # cropping using custom function in utils.py 
