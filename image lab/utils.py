@@ -39,5 +39,6 @@ def negative_img(image):
 
 def black_white(image):
     arr = np.array(image, dtype=np.uint8)
-    arr[arr>= 128] = 255 & arr[arr<128] = 0
+    arr[arr>= 128] = 255
+    arr[arr<128] = 0
     return Image.fromarray(arr)

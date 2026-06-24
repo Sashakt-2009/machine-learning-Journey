@@ -12,7 +12,7 @@ print(f"shape: {arr.shape}\nno. of dimensions: {arr.ndim}\ndtypes: {arr.dtype}\n
 
 # comverting the generated array to an img
 img = Image.fromarray(arr)
-img.show()
+img.save("image lab\saves\img.png")
 
 # image Statistics
 print("IMAGE STATISTICS:") 
@@ -38,19 +38,22 @@ min_pixel_val: {(int(R_vals.min()), int(G_vals.min()), int(B_vals.min()))}\nstan
 red_only = arr.copy()
 red_only[:,:, 1:2] = 0              # making G and B values 0
 red_only_img = Image.fromarray(red_only)
+red_only_img.save("image lab\saves\RedOnlyimg.png")
 
 green_only = arr.copy()
 green_only[:,:, 0 & 2] = 0            # making R and B values 0
 green_only_img = Image.fromarray(red_only)
+green_only_img.save("image lab\saves\GeenOnlyimg.png")
 
 blue_only = arr.copy()
 blue_only[:,:, 0:1] = 0           # making R and B values 0
 blue_only_img = Image.fromarray(red_only)
+blue_only_img.save("image lab\saves\BlueOnlyimg.png")
 
 # cropping using custom function in utils.py 
 
 cropped_img = utils.Crop((0,300), (0,300), img)
-cropped_img.show()
+cropped_img.save("image lab\saves\cropped_img.png")
 
 # flipping img -> vflip & hflip
 
@@ -58,7 +61,10 @@ V_flipped = np.flip(arr, axis=0)
 H_flipped = np.flip(arr, axis=1)
 
 V_flipped_img = Image.fromarray(V_flipped)
-H_flippedP_img = Image.fromarray(H_flipped)
+V_flipped_img.save("image lab\saves\V_flipped_img.png")
+H_flipped_img = Image.fromarray(H_flipped)
+H_flipped_img.save("image lab\saves\H_flipped_img.png")
 
-a = utils.increase_brightness(img, 10)
-print(a)
+#changing brightness
+bright_img = utils.change_brightness(img, 10)
+bright_img.save("image lab\saves\Bright_img.png")
