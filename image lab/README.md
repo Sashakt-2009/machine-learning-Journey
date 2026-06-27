@@ -6,7 +6,7 @@ A small image processing demo that generates a random RGB image, computes image 
 
 - `Imagelab.py` - main script that creates a random image and saves several processed versions.
 - `utils.py` - helper functions for cropping, brightness adjustment, negative conversion, and black-and-white conversion.
-- `saves/` - output folder where generated images are stored.
+- `Saves/` - output folder where generated images are stored.
 
 ## Features
 
@@ -19,7 +19,7 @@ A small image processing demo that generates a random RGB image, computes image 
   - mean brightness
   - max/min pixel values
   - brightness standard deviation
-- Save the original image to `saves/img.png`.
+- Save the original image to `Saves/img.png`.
 - Create and save single-channel versions:
   - red-only
   - green-only
@@ -49,7 +49,7 @@ cd "c:\Users\gdlga\OneDrive\Desktop\machine learning\image lab"
 python Imagelab.py
 ```
 
-Generated output images are saved in the `saves/` directory.
+Generated output images are saved in the `Saves/` directory.
 
 ## Notes
 
