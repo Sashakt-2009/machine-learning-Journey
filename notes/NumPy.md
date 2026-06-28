@@ -167,4 +167,4 @@ You can perform these on the *entire array or specify an axis* to aggregate acro
 
 **Reversing:** `np.flip()` allows you to *reverse the contents of an array* along one or all axes
 
-## Note: For more details on specific parts or other functions, methods visit [text](https://numpy.org/doc/2.3/user/absolute_beginners.html)
+## Note: For more details on specific parts or other functions, methods visit [NumPY](https://numpy.org/doc/2.3/user/absolute_beginners.html)
